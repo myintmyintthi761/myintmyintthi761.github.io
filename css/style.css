@@ -104,6 +104,13 @@ button { color: inherit; font: inherit; }
 .about__detail { max-width: 560px; color: var(--muted); font-size: .98rem; line-height: 1.85; }
 .about__detail p { margin: 0 0 16px; }
 .about__detail p:last-child { margin-bottom: 0; }
+.about__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0 0; }
+.about__fact { min-height: 112px; padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); transition: transform .25s var(--ease), border-color .25s, box-shadow .25s; }
+.about__fact:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow); }
+.about__fact dt { margin-bottom: 12px; color: var(--muted); font: 500 .65rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.about__fact dd { margin: 0; font: 600 .9rem/1.55 var(--font-display); }
+.about__highlights { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.about__highlights span { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font: 500 .72rem var(--font-mono); letter-spacing: .04em; }
 .about__note { display: flex; align-items: center; gap: 14px; padding-top: 28px; color: var(--muted); font-size: .82rem; }
 .about__note p { margin: 0; }
 .about__note-mark { color: var(--accent-strong); font-size: 1.25rem; }
@@ -139,14 +146,6 @@ button { color: inherit; font: inherit; }
 .contact h2 span { color: var(--accent); }
 .contact__copy { position: relative; z-index: 1; max-width: 410px; margin: 18px 0 0; color: #e0cbc5; line-height: 1.7; }
 .contact__links { position: relative; z-index: 1; display: flex; flex-shrink: 0; align-items: center; gap: 18px; }
-.contact__social {
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-  background: var(--accent);
-  color: #20211f;
-}
-.contact__social:hover { color: var(--accent); }
 .button--light { position: relative; z-index: 1; flex-shrink: 0; background: var(--accent); color: #20211f; }
 .contact__decoration { position: absolute; top: -115px; right: 9%; color: rgb(237 180 168 / 9%); font-size: 23rem; line-height: 1; animation: turn 50s linear infinite; }
 .site-footer { min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); }
@@ -197,6 +196,9 @@ button { color: inherit; font: inherit; }
   .about__content { grid-template-columns: 1fr; gap: 18px; padding: 28px 0; }
   .about__lead { max-width: 440px; }
   .about__detail { font-size: .93rem; }
+  .about__facts { grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
+  .about__fact { min-height: 0; padding: 17px 18px; }
+  .about__fact dt { margin-bottom: 7px; }
   .focus__grid { grid-template-columns: 1fr; gap: 12px; }
   .projects__grid { grid-template-columns: 1fr; gap: 12px; }
   .project-card { min-height: 230px; padding: 24px; }
