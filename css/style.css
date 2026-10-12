@@ -139,7 +139,13 @@ button { color: inherit; font: inherit; }
 .contact h2 span { color: var(--accent); }
 .contact__copy { position: relative; z-index: 1; max-width: 410px; margin: 18px 0 0; color: #e0cbc5; line-height: 1.7; }
 .contact__links { position: relative; z-index: 1; display: flex; flex-shrink: 0; align-items: center; gap: 18px; }
-.contact__social { color: #fff8f5; font-size: .83rem; font-weight: 600; transition: color .2s; }
+.contact__social {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #20211f;
+}
 .contact__social:hover { color: var(--accent); }
 .button--light { position: relative; z-index: 1; flex-shrink: 0; background: var(--accent); color: #20211f; }
 .contact__decoration { position: absolute; top: -115px; right: 9%; color: rgb(237 180 168 / 9%); font-size: 23rem; line-height: 1; animation: turn 50s linear infinite; }
